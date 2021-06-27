@@ -60,3 +60,34 @@ newArticle.setAttribute("id", "everyday");
 newArticle.innerHTML = content;
 
 main.append(newArticle);
+
+/**
+ * my solution
+ */
+
+const navContent = `
+  <li><a href=#>Home</a></li>
+  <li><a href=#>About Us</a></li>
+  <li><a href=#>Products</a></li>
+  <li><a href=#>Testimonies</a></li>
+  <li><a href=#>Contact Us</a></li>
+`;
+
+const header = document.querySelector(".siteheader");
+const newNav = document.createElement("nav");
+
+
+const newUl = document.createElement("ul");
+newUl.innerHTML = navContent;
+
+newNav.classList.add("navBar");
+newUl.classList.add("unordered__list");
+// newUl.style.display = "flex";
+// newUl.style.justifyContent = "space-between";
+// newUl.style.alignItems = "center";
+
+/** Instructor solution: he added css to style in index.html */
+
+
+header.append(newNav);
+newNav.append(newUl);
