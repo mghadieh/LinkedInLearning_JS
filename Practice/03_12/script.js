@@ -1,3 +1,5 @@
+import Desk from "./desk.js";
+
 /**
  * Practice: Making classes and objects
  *
@@ -6,3 +8,7 @@
  * - Create several objects using the class.
  * - Test the objecs by calling their properties and using their methods in the console.
  */
+const workDesk = new Desk(60, 60, 60, "full", 400, 400);
+
+console.log("Work Desk:", workDesk);
+console.log("Volume of water: ", workDesk.waterBottle.status);

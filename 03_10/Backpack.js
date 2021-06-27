@@ -6,6 +6,7 @@
  */
 
 class Backpack {
+  //capitalizing the beginning of the name is convention
   constructor(
     // Defines parameters:
     name,

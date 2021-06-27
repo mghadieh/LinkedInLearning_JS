@@ -1,23 +1,19 @@
 /**
  * Challenge: Create a new object type
- * 
+ *
  * - Create a new object type "Book" using a class or an object constructor function.
  * - Add at least 5 book objects.
  */
 
-import Backpack from "./Backpack.js";
+import Book from "./Book.js";
+// name, volume, color, numOfPages, cover, readStatus
+const manual = new Book("JS Manual -  A2Z", 3, "blue", 150, "soft", false);
+const cookBook = new Book("Cook Book", 1, "red", 500, "hard", true);
 
-const everydayPack = new Backpack(
-  "Everyday Backpack",
-  30,
-  "grey",
-  15,
-  26,
-  26,
-  false,
-  "December 5, 2018 15:00:00 PST"
-);
+// console.log("The manual object:", manual);
+console.log("The cook Book object:", cookBook);
 
-console.log("The everydayPack object:", everydayPack);
-console.log("The pocketNum value:", everydayPack.pocketNum);
-console.log("Days since aquired:", everydayPack.backpackAge());
+console.log("The cookBook cover value is ", cookBook.cover);
+cookBook.hardCover("soft");
+console.log("The cookBook cover value is ", cookBook.cover);
+console.log("Is book read: ", cookBook.readStatus);

@@ -53,6 +53,7 @@ const main = document.querySelector(".maincontent");
 const newArticle = document.createElement("article");
 newArticle.classList.add("backpack");
 newArticle.setAttribute("id", "everyday");
+// we need to remove the article tag from the template literal before adding this element
 newArticle.innerHTML = content;
 
 main.append(newArticle);
