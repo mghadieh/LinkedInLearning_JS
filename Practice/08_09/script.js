@@ -57,3 +57,26 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+const helperFunction = (obj) => {
+  let newFigure = document.createElement("figure");
+  let newImg = document.createElement("img");
+  newImg.setAttribute("src", obj.image);
+  newImg.setAttribute("alt", "");
+  let newFigCap = document.createElement("figcaption");
+  newFigCap.innerHTML = "It's a Frog Backpack!";
+  newFigure.append(newImg, newFigCap);
+
+  return newFigure;
+};
+
+const main = (frogpack) => {
+  let newArticle = document.createElement("article");
+  let newFrogPack = helperFunction(frogpack);
+  newArticle.innerHTML = content;
+  newArticle.prepend(newFrogPack);
+
+  return newArticle;
+};
+
+document.querySelector("main").append(main(frogpack));
