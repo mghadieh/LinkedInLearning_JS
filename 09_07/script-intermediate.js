@@ -52,6 +52,15 @@ const newStrapLength = (strapArray) => {
       <input type="number" name="${side}Length" placeholder="New ${side} length">
       <button>Update</button>
     `;
+    // ********* Beginning of Solution *******************
+    lengthForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      let newValue = lengthForm.querySelector("input").value;
+      listElement.querySelector("span").innerHTML = `${newValue} inches`;
+      lengthForm.querySelector("input").value = "";
+    });
+    // ********* End of Solution *************************
 
     // Add form to the end of the list element
     listElement.append(lengthForm);
